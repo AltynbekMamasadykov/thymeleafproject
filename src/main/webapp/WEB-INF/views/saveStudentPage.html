@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>saveStudentPage</title>
+</head>
+<body>
+
+<!-- create forms-->
+<h1>Saving new Student</h1>
+<form action="#"
+      th:action="@{/students/save}"
+      method="post"
+      th:object="${emptyStudent}">
+    <input type="text" th:field="*{name}" placeholder="name"/><br/>
+
+    <input type="email" th:field="*{email}" placeholder="email"/><br/>
+
+    <input type="number" th:field="*{age}" placeholder="age"/><br/>
+
+    <button type="submit">save</button>
+</form>
+
+</body>
+</html>
